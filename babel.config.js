@@ -11,6 +11,7 @@ module.exports = {
       },
     ],
   ],
+  forceAllTransforms: true,
   exclude: new RegExp(
     fs
       .readFileSync(path.resolve('./non_ES5_node_modules'), 'utf-8')
