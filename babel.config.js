@@ -13,9 +13,5 @@ module.exports = {
     ],
   ],
 
-  exclude: new RegExp(
-    fs
-      .readFileSync(path.resolve('./non_ES5_node_modules'), 'utf-8')
-      .slice(1, -2),
-  ),
+  exclude: new RegExp('/node_modules/(?!(pdf-to-png-converter)/).*/'),
 };
