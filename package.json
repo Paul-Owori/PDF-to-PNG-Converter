@@ -5,13 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js",
-    "start": "node index.js",
-    "commit": "git add . && git commit && git push"
+    "dev": "nodemon ./server/index.js",
+    "start": "node ./build/index.js",
+    "commit": "git add . && git commit && git push",
+    "build": "babel -d ./build ./server -s",
+    "postinstall": "sh -c \"yarn --silent are-you-es5 check -r . | tail -n 2 > ./non_ES5_node_modules \""
   },
   "author": "Paul Owori",
   "license": "ISC",
   "dependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/polyfill": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
     "colors": "^1.4.0",
     "cors": "^2.8.5",
     "express": "^4.18.0",
