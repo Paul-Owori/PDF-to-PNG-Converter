@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const joinImages = require('join-images');
-const pdfToPng = require('pdf-to-png-converter');
+const pdfToPng = require('./pdf-to-png-converter/out/index');
 
 const convertPDFToImage = async (filePath, deleteAfterConvert = true) => {
   try {
