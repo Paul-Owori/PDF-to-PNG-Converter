@@ -10,15 +10,15 @@
     "commit": "git add . && git commit && git push",
     "build": "babel -d ./build ./server -s",
     "postinstall": "sh -c \"yarn --silent are-you-es5 check -r . | tail -n 2 > ./non_ES5_node_modules \"",
-    "updatePj":"git reset HEAD --hard && git pull origin master && npm install && npm run build"
+    "updatePj": "git reset HEAD --hard && git pull origin master && npm install && npm run build"
   },
   "author": "Paul Owori",
   "license": "ISC",
   "dependencies": {
-    "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.10.5",
-    "@babel/polyfill": "^7.10.4",
-    "@babel/preset-env": "^7.10.4",
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.16.11",
     "colors": "^1.4.0",
     "cors": "^2.8.5",
     "express": "^4.18.0",
